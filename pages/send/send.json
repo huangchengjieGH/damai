@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "免费派单",
+  "navigationBarBackgroundColor": "white",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "footer": "/components/footer/footer"
+  }
+}

@@ -1,0 +1,16 @@
+<scroll-view class='detailCon'>
+  <view class='swiperImg'>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" current="{{index}}" bindchange='bindchange' class="swiper_show01">
+      <swiper-item wx:for="{{imageList.images}}">
+        <image src="{{item.url}}" class="slide-image" mode="aspectFit" bindload="imageLoad" />
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class='bottombtn'>
+    <view class='instructions'>
+      <view>{{imageList.title}}</view>
+      <view style='margin-left:20rpx;padding-top:5rpx;'>{{index+1}}/{{imageList.images.length}}</view>
+    </view>
+    <button class='btn' catchtap='onBtnTap'>装成这样要花多少钱</button>
+  </view>
+</scroll-view>

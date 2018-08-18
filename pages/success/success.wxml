@@ -1,0 +1,9 @@
+<view class='success'>
+ <view style='text-align:center;display:flex;flex-direction:column;margin-top:400rpx;letter-space:2px'> 
+ <text style='font-size:38rpx;'>申请成功</text>
+ <text style='font-size:26rpx;margin-top:15rpx;'>装修顾问将会在稍后给您致电</text>
+ <text style='font-size:26rpx;'>请耐心等待</text>
+
+ </view>
+
+</view>

@@ -1,0 +1,77 @@
+<scroll-view class='quatationCon'>
+  <view class='quatation'>
+    <view style='display:flex;flex-direction:row;text-align:center'>
+      <view class='line'> </view>
+      <view style='margin-left: 250rpx;'>你家装修预算</view>
+      <view class='line2'> </view>
+    </view>
+
+    <view class='display'>
+      <view class='displayValue'>
+        <view class='value'>{{price.price==null?'18200':price.price}}</view>
+        <view class='yuan'>元</view>
+      </view>
+    </view>
+
+    <view class='fees'>
+      <view style='display:flex;flex-direction:column;padding-left:90rpx;padding-right:90rpx;'>
+        <text>人工费: ? 元</text>
+        <text>设计费: ? 元</text>
+      </view>
+
+      <view style='display:flex;flex-direction:column'>
+        <text>材料费: ? 元</text>
+        <text>质检费: ? 元</text>
+      </view>
+    </view>
+    <view>
+      <view class='city'>
+        <text style='margin-left:20rpx;'>{{chooseCity}}</text>
+        <image class='rightClick' src='/images/icons/rightClick.png' catchtap='onChangeShowState'></image>
+      </view>
+
+      <view class='city' style='margin-top:20rpx;'>
+        <input class='house' type="number" placeholder="请输入您的房屋面积" bindblur="houseAreaInput" value="{{acreage}}" />
+        <view class='houseValue'>㎡</view>
+      </view>
+
+      <view class='city' style='margin-top:20rpx;'>
+        <!-- <text style='margin-left:20rpx;'>1室1厅1厨1卫1阳台</text> -->
+        <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+          <view class="picker">
+            {{multiArray[0][multiIndex[0]]}} {{multiArray[1][multiIndex[1]]}} {{multiArray[2][multiIndex[2]]}} {{multiArray[3][multiIndex[3]]}} {{multiArray[4][multiIndex[4]]}}
+          </view>
+          <image class='downClick' src='/images/icons/downClick.png'></image>
+        </picker>
+        <!-- <image class='downClick' src='/images/icons/downClick.png'></image> -->
+      </view>
+
+      <view class='city' style='margin-top:20rpx;'>
+        <input class='house' type="number" maxlength="11" placeholder="输入号码，报价结果将发送到您的手机" bindblur="phoneInput" value="{{inputPhone}}" />
+      </view>
+    </view>
+    <view style='margin:20rpx 16rpx;' catchtap='onCommitTap'>
+      <button class='btn'>立即计算</button>
+    </view>
+    <view style='font-size:27rpx;padding-bottom:20rpx;'>填写信息获取免费量房服务，定制更精准预算规划</view>
+  </view>
+</scroll-view>
+<!-- 弹窗 -->
+<view class="{{showChapter?'view_show2':'view_hide2'}}">
+  <view class="popup-wrapper2" bindtap="onChangeShowState"></view>
+  <view class="popup-left2">
+    <view class="kind-list2">
+      <scroll-view scroll-y="true" style='height:1160rpx;' class='province2'>
+        <block wx:for="{{provinceList}}" wx:for-index="index">
+          <view class='provincename' style="{{province==item.name?'color:#ec820e':''}}" catchtap='onProvinceTap' data-province="{{item.name}}" data-index="{{index}}">{{item.name}}</view>
+
+        </block>
+      </scroll-view>
+      <scroll-view scroll-y="true" style='height:1160rpx;' class='city2'>
+        <block wx:for="{{cities}}">
+          <view class='cityname' style="{{city==item.name?'color:#ec820e':''}}" catchtap='onCityTap' data-city="{{item.name}}" data-choosecity="{{province}}|{{item.name}}">{{item.name}}</view>
+        </block>
+      </scroll-view>
+    </view>
+  </view>
+</view>

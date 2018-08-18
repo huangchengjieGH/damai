@@ -1,0 +1,8 @@
+<!-- <image style="width: {{imagewidth}}px; height: {{imageheight}}px;"  src="{{imagefirstsrc}}" bindload="imageLoad"></image> -->
+
+
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}"  current="{{index}}" bindchange='bindchange' class="swiper_show099">
+      <swiper-item wx:for="{{images}}" >
+        <image style="width: {{imagewidth}}px; height: {{imageheight}}px;"  src="{{imagefirstsrc}}" bindload="imageLoad"></image>
+      </swiper-item>
+  </swiper>

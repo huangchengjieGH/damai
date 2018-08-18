@@ -1,0 +1,211 @@
+/* pages/quotation/quotation.wxss */
+.quatationCon{
+  background-color: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+   height: 100%; 
+}
+.quatation{
+  background-color: white;
+  border-radius: 20rpx;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2); 
+  margin: 30rpx;
+  /* height: 1000rpx; */
+  border: none;
+  text-align: center;
+  position: relative;
+  padding: 10rpx;
+}
+.line{
+  position: absolute;
+  border-bottom: 1rpx solid #908e8e;
+  width: 180rpx;
+  left: 50rpx;
+  top: 30rpx;
+}
+.line2{
+  position: absolute;
+  border-bottom: 1rpx solid #908e8e;
+  width: 180rpx;
+  right: 50rpx;
+  top: 30rpx;
+}
+.display{
+  margin: 20rpx;
+  height: 130rpx; 
+  background-color: #f8f8f8;
+  border-radius: 10rpx;
+  padding-top: 5rpx;
+}
+.displayValue{
+  position: relative;
+ border: 2rpx solid black;
+ height: 55rpx;
+ padding: 30rpx;
+ margin: 15rpx;
+ padding-top: 10rpx;
+ display: flex;
+ flex-direction: row;
+}
+.value{
+  position: absolute;
+  right: 50rpx;
+  font-size:55rpx;
+}
+.yuan{
+position: absolute;
+right: 10rpx;
+bottom: 10rpx;
+}
+.fees{
+  border-bottom: 1rpx solid #f8f8f8;
+  display: flex;
+  flex-direction: row;
+  padding: 10rpx 20rpx;
+}
+.city{
+  background-color: #f8f8f8;
+  margin: 15rpx;
+  padding: 20rpx;
+  border-radius: 10rpx;
+  text-align: left;
+  /* color: #a5a6aa; */
+  position: relative;
+}
+.rightClick{
+  position: absolute;
+  right: 15rpx;
+  top: 18rpx;
+  height: 50rpx;
+  width: 50rpx;
+}
+.house{
+  margin-left: 20rpx;
+  /* color: #a5a6aa; */
+}
+.houseValue{
+  position: absolute;
+  right: 20rpx;
+  top: 18rpx;
+  color: black
+}
+.downClick{
+  position: absolute;
+  right: 15rpx;
+  top: 18rpx;
+  height: 45rpx;
+  width: 45rpx;
+}
+.btn{
+  background-color: #ec820e;
+  color: white
+}
+
+
+
+    
+/* 弹窗 */
+.view_show2 {
+  display: block;
+}
+.view_hide2, .modal1 {
+  display: none;
+}
+.popup-wrapper2 {
+  background: rgba(0, 0, 0, 0.4);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  overflow: auto;
+  margin: 0;
+  z-index: 3;
+  animation: fadein 0.5s;
+}
+.popup-left2 {
+  width: 280px;
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  height: 100%;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  box-shadow: rgba(0, 0, 0, 0.270588) 0px -2px 20px 0px;
+  flex-direction: column;
+  z-index: 200;
+  animation: moveright 0.4s ease;
+  overflow-y: scroll;
+}
+.weui-flex__item2 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  font-size: 35rpx;
+}
+.weui-cell_access2 {
+  color: inherit;
+}
+.weui-flex {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.weui-cells {
+  margin: 0;
+  opacity: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.weui-cells:before, .weui-cells:after {
+  display: none;
+}
+
+.weui-cells_show {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.weui-cell:before {
+  right: 15px;
+}
+
+.kind-list2 {
+  padding: 6px 0;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+}
+.province2{
+  background-color: white;
+  padding: 20rpx 25rpx;
+  /* height:1160rpx; */
+  width: 140px;
+  display: flex;
+  flex-direction: column;
+  letter-spacing: 2px;
+}
+.provincename{
+  letter-spacing: 2px;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #f8f8f8;
+}
+.cityname{
+  letter-spacing: 2px;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #f8f8f8;
+}
+.city2{
+   /* height:1160rpx; */
+   padding: 25rpx 25rpx;
+   width: 140px;
+   background-color: #f8f8f8;
+   display: flex;
+  flex-direction: column;
+  letter-spacing: 2px;
+}

@@ -1,0 +1,184 @@
+.designCon {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+.designImg{
+  width: 100%;
+  opacity: 0.7;
+  height: 400rpx;
+}
+.design{
+ position: relative;
+}
+.middle{
+ position: absolute;
+ top: 50rpx;
+ background-color: white;
+ height: 300rpx;
+ width: 80%;
+ border-radius: 10rpx;
+ margin-left: 75rpx;
+ opacity: 0.6;
+}
+.line{
+  position: absolute;
+  border-bottom: 1rpx solid black;
+  width: 180rpx;
+  left: 10rpx;
+  top: 200rpx;
+}
+.line2{
+  position: absolute;
+  border-bottom: 1rpx solid black;
+  width: 180rpx;
+  right: 1rpx;
+  top: 200rpx;
+}
+.body{
+  position: absolute;
+  display:flex;
+  flex-direction:column;
+  text-align:center;
+  top: 80rpx;
+  left: 80rpx;
+}
+.name{
+  background-color: #f8f8f8;
+  margin: 15rpx;
+  padding: 20rpx;
+  border-radius: 10rpx;
+  text-align: left;
+  /* color: #a5a6aa; */
+  position: relative;
+}
+.city{
+  background-color: #f8f8f8;
+  margin: 15rpx;
+  padding: 20rpx;
+  border-radius: 10rpx;
+  text-align: left;
+  /* color: #a5a6aa; */
+  position: relative;
+}
+.rightClick{
+  position: absolute;
+  right: 30rpx;
+  top: 18rpx;
+  height: 50rpx;
+  width: 50rpx;
+}
+.checkbox{
+  font-size:24rpx;
+  margin-left: 20rpx;
+}
+.btn{
+  background-color: #ec820e;
+  color: white
+}
+
+/* 弹窗 */
+.view_show2 {
+  display: block;
+}
+.view_hide2, .modal1 {
+  display: none;
+}
+.popup-wrapper2 {
+  background: rgba(0, 0, 0, 0.4);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  overflow: auto;
+  margin: 0;
+  z-index: 3;
+  animation: fadein 0.5s;
+}
+.popup-left2 {
+  width: 280px;
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  height: 100%;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  box-shadow: rgba(0, 0, 0, 0.270588) 0px -2px 20px 0px;
+  flex-direction: column;
+  z-index: 200;
+  animation: moveright 0.4s ease;
+  overflow-y: scroll;
+}
+.weui-flex__item2 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  font-size: 35rpx;
+}
+.weui-cell_access2 {
+  color: inherit;
+}
+.weui-flex {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.weui-cells {
+  margin: 0;
+  opacity: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.weui-cells:before, .weui-cells:after {
+  display: none;
+}
+
+.weui-cells_show {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.weui-cell:before {
+  right: 15px;
+}
+
+.kind-list2 {
+  padding: 6px 0;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+}
+.province2{
+  background-color: white;
+  padding: 20rpx 25rpx;
+  /* height:1160rpx; */
+  width: 140px;
+  display: flex;
+  flex-direction: column;
+  letter-spacing: 2px;
+}
+.city2{
+   /* height:1160rpx; */
+   padding: 15rpx 25rpx;
+   width: 140px;
+   background-color: #f8f8f8;
+   display: flex;
+  flex-direction: column;
+  letter-spacing: 2px;
+}
+.provincename{
+  letter-spacing: 2px;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #f8f8f8;
+}
+.cityname{
+  letter-spacing: 2px;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #f8f8f8;
+} 

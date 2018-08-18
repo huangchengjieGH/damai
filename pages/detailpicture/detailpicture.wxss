@@ -1,0 +1,41 @@
+.detailCon{
+ background-color: black;
+ height: 100%;
+}
+/* .img{
+  width: 100%;
+} */
+.instructions{
+  color: white;
+  display: flex;
+  padding-left: 20rpx;
+}
+.bottombtn{ 
+  position: absolute;
+  bottom: 20rpx;
+  width: 100%;
+}
+.btn{
+  background-color: #ec820e;
+  color: white;
+  margin: 20rpx;
+}
+.slide-image{
+  width: 100%;
+  height: 100%;
+   /* height: 1000rpx;  */
+}
+.swiperImg{
+   width: 100%;
+  height: 100%; 
+}
+.swiper_show01 {
+  height: 130vw;
+  width: 100%;
+  background-position: 50% 50%;
+}
+/* .swiper_show02 {
+  height: 60vw;
+  width: 100%;
+  background-position: 50% 50%;
+} */

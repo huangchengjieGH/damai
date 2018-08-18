@@ -1,0 +1,100 @@
+<scroll-view class='hpContrainer'>
+  <view>
+    <swiper autoplay="True" class="swiper_show60" indicator-dots="True" lower-threshold="30" indicator-color="rgba(255,255,255,0.3)" indicator-active-color="rgba(255,255,255,0.6)">
+      <swiper-item wx:for="{{bannerList}}" wx:for-item="isBanner" wx:key="{{index}}" id="{{index}}" bindtap="bannerJump">
+        <image style="width:100%; height:100%;display:block;" mode="aspectFill" src="{{isBanner.url}}" />
+      </swiper-item>
+    </swiper>
+
+  </view>
+
+  <view class='func'>
+    <navigator class='reprotCon' url='../quotation/quotation'>
+      <!-- <view class='report'>
+        <text>免费报价</text>
+        <view class='hot'>
+          <text>Hot</text>
+        </view>
+      </view>
+      <view style='color:#666666;font-size:12px;text-align:left;margin-left:20rpx;'>1分钟了解装修花多少钱</view>
+      <view class='reportViewImg'>
+        <image class='reportImg' src='/images/icons/111.png'></image>
+      </view> -->
+      <image mode='widthFix' style='width:100%' src='http://damaizs.oss-cn-shenzhen.aliyuncs.com/file/1528612397547_9dfd2724e96b9f2b13e5f4ce83df936d.gif'></image>
+    </navigator>
+
+    <view class='design'>
+      <navigator class='free' url='../design/design'>
+        <!-- <view>
+          <view style='margin: 25rpx 15rpx;'>
+            <view class='freeDesign'>
+              <text>免费设计</text>
+            </view>
+            <view style='color:#b6b6b5;font-size:25rpx;text-align:left;padding-bottom:20rpx;'>72小时出全屋设计图</view>
+          </view>
+        </view>
+        <view style='display:flex;flex-derection:column'>
+          <image style='height:120rpx;width:130rpx;margin:20rpx 0 0 0rpx;margin-right:-45rpx;margin-top:13rpx;' src='/images/icons/desk.png'></image>
+        </view> -->
+        <image mode='widthFix' style='width:100%' src='http://damaizs.oss-cn-shenzhen.aliyuncs.com/file/1528617714248_bbe19fb408c294d6559454f2644335b8.jpeg'></image>
+      </navigator>
+      <navigator class='dispatch' url='../send/send'>
+        <!-- <view style='display: flex; flex-direction: column;height:100%;width:100%;'>
+           <text>免费派单</text> 
+          <text style='color:#b6b6b5;font-size:25rpx;text-align:left;padding-top:10rpx;'>免费派送装修报价设计订单</text>
+        </view> -->
+         <image mode='widthFix' style='width:100%' src='http://damaizs.oss-cn-shenzhen.aliyuncs.com/file/1528617888697_d6da08f30c076113903707990334b851.gif'></image> 
+      </navigator>
+    </view>
+  </view>
+
+  <view class='decoration'>
+    <view class="panel_title">
+      <text>装修效果图</text>
+      <view style='display: flex;flex-direction:row;position: absolute;right:50rpx;font-weight:300' catchtap='onMoreTap'>
+        <text>查看更多</text>
+        <image src='/images/icons/arrow-right.png' style='height:25rpx;width:25rpx;padding-top:6rpx;padding-left:10rpx;'></image>
+      </view>
+    </view>
+
+    <view class='reservetype'>
+      <block wx:for="{{drawList}}" wx:for-item="item">
+        <view class='type' style="{{status==item.type?'border-bottom:3rpx solid #ec820e;color:#ec820e':''}}" catchtap='onTypeTap' data-status='{{item.type}}'>
+          <view wx:if="{{item.type=='style'}}">
+            <text>按风格</text>
+          </view>
+          <view wx:if="{{item.type=='houseType'}}">
+            <text>按户型</text>
+          </view>
+          <view wx:if="{{item.type=='acreage'}}">
+            <text>按面积</text>
+          </view>
+
+        </view>
+      </block>
+    </view>
+
+    <view class='slide'>
+      <scroll-view scroll-x="true" class='scrollview'>
+        <view style='display: inline-block;margin:6px' wx:for="{{imgList.drawings}}" wx:for-item="work" wx:key="{{index}}">
+          <view style='position:relative' catchtap='onPictureTap' data-classify="{{work.tag}}">
+            <view class='tips'>
+              <text>{{work.tag}}</text>
+              <text>{{work.count}}套</text>
+            </view>
+            <image class='work-img' mode="aspectFill" src='{{work.imgUrl}}'></image>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+  <footer></footer>
+</scroll-view>
+
+<!-- <button class="float-btn service-btn" open-type="contact">
+  <image class="kefu" mode="widthFix" src="/images/icons/kefu_r.png" />
+</button> -->
+
+<button class="contactus" open-type="contact">
+  <image class="contactImg" mode="widthFix" src="/images/icons/contact.png" />
+</button>

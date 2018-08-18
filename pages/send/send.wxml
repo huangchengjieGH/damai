@@ -1,0 +1,26 @@
+<view class="container" style="padding:0rpx">
+  <scroll-view class='sendCon' scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollHeight}}px;" bindscrolltolower="bindDownLoad" bindscrolltoupper="topLoad" bindscroll="scroll">
+    <view class='send' wx:for="{{orderList}}">
+    <view>
+      <view style='display:flex;flex-direction:row'>
+        <view>城市: {{item.province!=null?item.province:''}}|{{item.city!=null?item.city:''}}</view>
+        <view wx:if="{{item.acreage==null?'':'display:none'}}" style='position:absolute;right:20rpx;'>房屋面积: {{item.acreage!=null?item.acreage:''}}㎡</view>
+      </view>
+      <view style='margin-top:10rpx;' wx:if="{{item.name!=''}}">
+        <text>名字:{{item.name}}</text>
+      </view>
+      <view style='margin-top:10rpx;'>
+        <text wx:if="{{item.room!=null}}">户型:{{item.room}}室{{item.hall}}厅{{item.kitchen}}厨{{item.bathRoom}}卫{{item.balcony}}阳台</text>
+      </view>
+      <button open-type="contact" class='recieve'>
+        <view>接单</view>
+      </button>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="body-view">
+    <loading hidden="{{hidden}}" bindchange="loadingChange">
+      加载中...
+    </loading>
+  </view>
+</view>

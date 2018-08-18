@@ -1,0 +1,19 @@
+<view class='resultCon'>
+  <view class='result'>
+    <view class='price'>
+      <text style='margin-top:20rpx;font-weight:500'>毛坯房装修预估价</text>
+      <text style='margin:10rpx;color:#ec820e;font-size:39rpx;font-weight:500'>{{price.price}}/元</text>
+    </view>
+
+    <view style='display:flex;flex-direction: column;margin:20rpx;'>
+      <block wx:for="{{price.subPriceList}}">
+        <text style='margin-top:10rpx;'>{{item.name}}:{{item.price}}元</text>
+      </block>
+
+      <!-- <text style='margin-top:10rpx;'>材料费:30150元</text>
+      <text style='margin-top:10rpx;'>设计费:30150元</text>
+      <text style='margin-top:10rpx;'>质检费:30150元</text> -->
+    </view>
+  </view>
+  <view style='font-size:25rpx;margin-left:30rpx;color:#ec820e;'>Tips:因材料品牌及工程量不同，具体报价以量房实测为准</view>
+</view>

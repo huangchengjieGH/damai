@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/homepage/homepage",
+    "pages/quotation/quotation",
+    "pages/pictures/pictures",
+    "pages/detailpicture/detailpicture",
+    "pages/test/test",
+    "pages/result/result",
+    "pages/send/send",
+    "pages/success/success",
+    "pages/design/design",
+    "pages/my/my",
+    "pages/login/login", 
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/aboutyf/aboutyf"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "backgrondColorTop": "#16b8e5"
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#ec820e",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/homepage/homepage",
+        "text": "首页",
+        "iconPath": "images/icons/hp.png",
+        "selectedIconPath": "/images/icons/hp_l.png"
+      },
+      {
+        "pagePath": "pages/pictures/pictures",
+        "text": "图库",
+        "iconPath": "images/icons/pic.png",
+        "selectedIconPath": "/images/icons/pic_l.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/icons/my.png",
+        "selectedIconPath": "/images/icons/my_l.png"
+      }
+    ]
+  }
+}

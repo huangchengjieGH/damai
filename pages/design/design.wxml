@@ -1,0 +1,68 @@
+<scroll-view class='designCon'>
+  <view class='design'>
+    <image class='designImg' mode="aspectFill" src='http://damaizs.oss-cn-shenzhen.aliyuncs.com/file/1528531070929_f3ccdd27d2000e3f9255a7e3e2c48800.jpg'></image>
+    <view class='middle' />
+    <view class='body'>
+      <text style='font-size:45rpx;font-weight:400;letter-spacing: 2px;'>0 元搞定</text>
+      <text style='letter-spacing: 3px;font-weight:400;'>全屋设计</text>
+      <view style='background-color:#ec820e;font-size:28rpx;padding:8rpx;color:white;margin:10rpx 180rpx;border-radius:5rpx'>全球仅限3000名</view>
+
+      <view class='line'> </view>
+      <view style='margin-left: 10rpx;'>还剩名额数</view>
+      <view class='line2'> </view>
+    </view>
+
+    <view style='text-align:center;position:absolute;top:310rpx;left:310rpx;background-color:#ec820e;padding:15rpx 30rpx;border-radius:5rpx'>
+      <text style='color:white;font-size:35rpx;'>110</text>
+    </view>
+  </view>
+
+  <view style='display:flex;flex-direction:column;text-align:center;padding-top:20rpx'>
+    <text>抢免费设计名额</text>
+    <image style='height:30rpx;width:30rpx;margin-left:350rpx' src='/images/icons/downClick.png'></image>
+  </view>
+
+  <view class='name' style='margin-top:20rpx;'>
+    <input style='margin-left:20rpx' placeholder="请输入您的称呼" bindblur="nameInput" value="{{name}}" />
+  </view>
+
+  <view class='name' style='margin-top:20rpx;'>
+    <input class='house' type="number" maxlength="11" placeholder="请输入手机号码" bindblur="phoneInput" value="{{inputPhone}}" />
+  </view>
+
+  <view class='city'>
+    <text style='margin-left:20rpx;'>{{chooseCity}}</text>
+    <image class='rightClick' src='/images/icons/rightClick.png' catchtap='onChangeShowState'></image>
+  </view>
+
+  <view>
+  <label class="checkbox" wx:for="{{items}}">
+    <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+  </label>
+
+  <view style='margin:30rpx 16rpx;' catchtap='onCommitTap'>
+      <button class='btn'>立即申请</button>
+    </view>
+  </view>
+
+</scroll-view>
+
+<!-- 弹窗 -->
+<view class="{{showChapter?'view_show2':'view_hide2'}}">
+  <view class="popup-wrapper2" bindtap="onChangeShowState"></view>
+  <view class="popup-left2">
+    <view class="kind-list2">
+      <scroll-view scroll-y="true" style='height:1160rpx;' class='province2'>
+        <block wx:for="{{provinceList}}" wx:for-index="index">
+          <view class='provincename' style="{{province==item.name?'color:#ec820e':''}}" catchtap='onProvinceTap' data-province="{{item.name}}" data-index="{{index}}">{{item.name}}</view>
+
+        </block>
+      </scroll-view>
+      <scroll-view scroll-y="true" style='height:1160rpx;' class='city2'>
+        <block wx:for="{{cities}}">
+          <view class='cityname' style="{{city==item.name?'color:#ec820e':''}}" catchtap='onCityTap' data-city="{{item.name}}" data-choosecity="{{province}}|{{item.name}}">{{item.name}}</view>
+        </block>
+      </scroll-view>
+    </view>
+  </view>
+</view>

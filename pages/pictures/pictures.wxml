@@ -1,0 +1,61 @@
+<scroll-view class='picContrainer'>
+  <view class='reservetype'>
+    <block wx:for="{{getProperties}}" wx:for-item="item" wx:for-index="index">
+      <view style='' class='block' catchtap='onTypeTap' data-index="{{index}}" data-type='{{item.type}}' style="{{type==item.type&&flag?'border-bottom:3rpx solid #ec820e;color:#ec820e':''}}">
+        <view wx:if="{{item.type=='style'}}">
+          <text class='type'>风格</text>
+        </view>
+        <view wx:elif="{{item.type=='houseType'}}">
+          <text class='type'>户型</text>
+        </view>
+        <view wx:elif="{{item.type=='acreage'}}">
+          <text class='type'>面积</text>
+        </view>
+        <view wx:elif="{{item.type=='color'}}">
+          <text class='type'>颜色</text>
+        </view>
+        <view wx:else="{{item.type=='color'}}">
+          <text class='type'>{{item.type}}</text>
+        </view>
+        <!-- <text wx:if="{{item.type=='style'}}"class='type'></text> -->
+        <image wx:if="{{type==item.type&&flag}}" class='typeImg' src='/images/icons/upC.png'></image>
+        <image wx:else class='typeImg' src='/images/icons/arrow-down.png'></image>
+      </view>
+    </block>
+  </view>
+  <scroll-view scroll-y="true" style="height:{{scrollHeight}}px;" class="list" bindscrolltolower="bindDownLoad" bindscrolltoupper="topLoad" bindscroll="scroll">
+    <view class="view_tdlUCs">
+      <block wx:for="{{pictureList}}" wx:key="{{index}}" wx:for-index="index">
+        <view class="bottomGrayboder2 rightGrayboder2 list-items-square2" catchtap='onPictureTap' data-id="{{item.id}}" data-value="{{item.value}}">
+          <navigator url="{{'../detailpicture/detailpicture?imagesId=' + item.id}}">
+            <image class="image_HsAX8s" mode="aspectFill" src="{{item.images[0].url}}" />
+          </navigator>
+
+          <view>
+            <view class="text_JkhshF3">{{item.title}}</view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+  <view class="body-view">
+    <loading hidden="{{hidden}}" bindchange="loadingChange">
+      加载中...
+    </loading>
+  </view>
+</scroll-view>
+
+<view class="modal-box" hidden="{{popflag}}" bindtap="hide">
+  <view class="modal-body">
+    <view class="modal-content">
+      <view class='modalCircle'>
+        <text class='modalValue' catchtap='onNoneTap'>不限</text>
+        <block wx:for="{{properties}}">
+          <view class='modalValue' catchtap='onPropertyTap' data-subProperty="{{item.tag}}">
+            <text style='font-size: 25rpx;'>{{item.tag}}</text>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>
